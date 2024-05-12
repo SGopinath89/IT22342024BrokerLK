@@ -18,4 +18,4 @@ app.listen(port,()=>{
     console.log("server started");
 })
 
-//mongodb+srv://<username>:<password>@cluster0.cekkhwq.mongodb.net/?
+//mongodb+srv://<username>:<password>@cluster0.teezko8.mongodb.net/?
