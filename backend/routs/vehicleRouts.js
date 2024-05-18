@@ -1,6 +1,6 @@
 import express from "express"
-import { addVehicle } from '../backend/controllers/vehicleController.js'
 import multer from "multer"
+import { addVehicle } from "../controllers/vehicleController.js";
 
 const vehicleRouter = express.Router();
 
