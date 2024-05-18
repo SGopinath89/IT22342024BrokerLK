@@ -18,4 +18,3 @@ app.listen(port,()=>{
     console.log("server started");
 })
 
-//mongodb+srv://<username>:<password>@cluster0.teezko8.mongodb.net/?
