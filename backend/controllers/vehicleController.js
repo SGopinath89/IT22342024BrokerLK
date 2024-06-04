@@ -15,10 +15,10 @@ const addVehicle = async(req,res) =>{
     })
     try {
         await vehicle.save();
-        res.jason({success:true,message:"Vehicle added"})
+        res.json({success:true,message:"Vehicle added"})
     } catch (error) {
         console.log(error)
-        res.jason({success:false,message:"Error"})
+        res.json({success:false,message:"Error"})
     }
 }
 
