@@ -21,5 +21,31 @@ const addVehicle = async(req,res) =>{
         res.json({success:false,message:"Error"})
     }
 }
+//all vehicle list
 
-export {addVehicle}
+const listVehicle=async(req, res) =>{
+    try {
+        const vehicle = await vehiclemodel.find({});
+        res.json({success:true,data:vehicle});
+    } catch (error) {
+        console.log(error);
+        res.jasoon({success:false,message:"error"});
+    }
+}
+
+//remove vehicle
+
+const removeVehicle=async(req, res) =>{
+    try {
+        const vehicle = await vehiclemodel.findById(req.body.id);
+        fs.unlink(`uploads/$vehicle.image`,()=>{})
+
+        await vehiclemodel.findById(req.body.id);
+        res.json({success:true,message:"Vehicle removed"});
+    } catch (error) {
+        console.log(error);
+        res.jasoon({success:false,message:"error"});
+    }
+}
+
+export {addVehicle,listVehicle,removeVehicle}

@@ -1,6 +1,6 @@
 import express from "express"
 import multer from "multer"
-import { addVehicle } from "../controllers/vehicleController.js";
+import { addVehicle, listVehicle,removeVehicle} from "../controllers/vehicleController.js";
 
 const vehicleRouter = express.Router();
 
@@ -18,6 +18,8 @@ const upload = multer({storage:storage});
 vehicleRouter.post("/add",upload.single("image"),addVehicle); 
 
 vehicleRouter.post("/add",addVehicle)
+vehicleRouter.get("/list",listVehicle)
+vehicleRouter.post("/remove",removeVehicle); 
 
 
 export default vehicleRouter;
